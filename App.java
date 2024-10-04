@@ -9,6 +9,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.security.Permissions;
 import java.text.FieldPosition;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
@@ -57,8 +58,8 @@ public class App {
         //1. use console to read in a string of text (sentence)
         //2. use FileWriter to write the content to the file
 
-        Console console = System.console();
-        String keyboardInput = console.readLine("Enter/Input a sentence: ");
+        // Console console = System.console();
+        // String keyboardInput = console.readLine("Enter/Input a sentence: ");
         
 //         FileWriter fw = new FileWriter(file, true); //so i can append to the file else it would be overwritten
 
@@ -146,6 +147,37 @@ public class App {
         CSVManagement csv = new CSVManagement();
 
         csv.readCSV(dirPathFileName);
+
+        //menu
+        //1. enter new person details
+
+        // Console consoleSelection = System.console();
+        // Integer selection = 0;
+        // while (selection !=3) {
+        //     System.out.println("1. Enter new person details");
+        //     System.out.println("2. Save to new csv file");
+        //     System.out.println("3. Quit program");
+            
+        //     selection = Integer.parseInt(consoleSelection.readLine(">>> "));
+
+        //     switch (selection) {
+        //         case 1:
+        //             Console con1 = System.console();
+        //             String personName = con1.readLine("Enter person name: ");
+        //             String personRegion = con1.readLine("Enter region area: ");
+        //             String personYOB = con1.readLine("Enter year of birth: ");
+
+        //             Person p = new Person(personName, personRegion, Integer.parseInt(personYOB));
+        //             persons.add(p);
+
+
+        //     }
+        // }
+
+        //2. save to file ( prompt for new csv file name)
+        //3. quit and terminate program
+
+        
 
 
 
